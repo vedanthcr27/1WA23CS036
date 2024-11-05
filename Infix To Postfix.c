@@ -62,7 +62,7 @@ void InfixtoPostfix(char source[], char target[]) {
         }
 
         else {
-            while (top != -1 && getPriority(stack[top]) >= getPriority(source[i])) {
+            while (top != -1 && getPriority(stack[top]) > getPriority(source[i])) {
                 target[j++] = pop(stack);
             }
             push(stack, source[i]);
